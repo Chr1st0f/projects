@@ -1,4 +1,5 @@
-#!../../venv_flask/bin/python
+#!/opt/rh/rh-python36/root/usr/bin/python
+##!../../venv_flask/bin/python
 # !--*--coding:utf-8--*--
 
 from db.data import Articles # Import data . Should be replaced by a DB
@@ -29,4 +30,4 @@ def page_not_found(error):
 	return render_template('errors/404.html'), 404
 
 if __name__=='__main__':
-	app.run(debug=True)
+	app.run(host='0.0.0.0', port='3001', debug=True)
