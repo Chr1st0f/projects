@@ -1,0 +1,17 @@
+{% from "includes/_formhelpers.html" import render_field %} <!-- Including bootstrap links into the html page -->
+<html>
+<head>
+	<title>WTForms example</title>
+</head>
+<body>
+	<form method='POST' action='/'>
+		<dl>
+			{{ form.csrf_token }}
+			{{ render_field(form.username) }} <!-- use the macro in _formhelpers.html-->
+			{{ render_field(form.password) }}
+			<input type="submit" value="Login">
+		</dl>
+	</form>
+</body>
+</html>
+
